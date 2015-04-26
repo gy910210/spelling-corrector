@@ -10,11 +10,11 @@ def edit(string1, string2):
 
     for ii in xrange(1, n + 1):
         record[0][ii] = ii
-        pos_record[0][ii] = (-1, ii - 1, '#', string2[ii - 1])
+        pos_record[0][ii] = (0, ii - 1, '#', string2[ii - 1])
 
     for jj in xrange(1, m + 1):
         record[jj][0] = jj
-        pos_record[jj][0] = (jj - 1, -1, string1[jj - 1], '#')
+        pos_record[jj][0] = (jj - 1, 0, string1[jj - 1], '#')
 
     for i in xrange(1, m + 1):
         for j in xrange(1, n + 1):
@@ -39,7 +39,9 @@ def edit(string1, string2):
     pos_vector = []
     i, j = m, n
     while i > 0 or j > 0:
+        print i, j
         i, j, ch1, ch2 = pos_record[i][j]
+        print ch1, ch2
         pos_vector.append((ch1, ch2))
     pos_vector.reverse()
 
@@ -70,4 +72,4 @@ def edit_dl(string1, string2):
 '''
 
 if __name__ == '__main__':
-    print edit('abb', 'ba')
+    print edit('you', 'bu')
