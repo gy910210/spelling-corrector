@@ -15,11 +15,15 @@ def dump_training_data(origin_file, format_file):
             print 'cnt: ' + str(cnt)
 
         data = json.loads(line.strip())
+        if (data['cor_type'] == 'cor') or (data['cor_type'] == 'spe_cor'):
+            continue
+        
         if data['match_type'] == 'precise':
             outfile.write(data['word'] + '\t' + data['key'] + '\t' + str(data['cnt']) + '\n')
         elif data['match_type'] == 'predict':
             if data['cor_type'] == '':
                 outfile.write(data['word'] + '\t' + data['word'] + '\t' + str(data['cnt']) + '\n')
+            '''
             elif data['cor_type'] == 'cor':
                 error_word = ''
                 for i in xrange(len(data['word'])):
@@ -28,6 +32,7 @@ def dump_training_data(origin_file, format_file):
                     else:
                         error_word = error_word + data['word'][i]
                 outfile.write(data['word'] + '\t' + error_word + '\t' + str(data['cnt']) + '\n')
+            '''
             elif data['cor_type'] == 'spe':
                 error_word = data['spell_info']['spell_in']
                 for i in xrange(len(data['word'])):
