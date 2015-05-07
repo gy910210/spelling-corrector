@@ -1,0 +1,52 @@
+<project default="jar" name="SpellCorrectorBuild">
+    <!-- 工程目录结构 project |-bin |-src |-lib |-out |-build.xml -->
+    <property name="lib.dir" value="lib" />
+    <property name="src.dir" value="src" />
+    <property name="classes.dir" value="bin" />
+    <property name="output.dir" value="out" />
+    <property name="jarname" value="SpellCorrector.jar" />
+    <property name="mainclass" value="cootek.spell.main.Run" />
+    <!-- 第三方jar包的路径 -->
+    <path id="lib-classpath">
+        <fileset dir="${lib.dir}">
+            <include name="**/*.jar" />
+        </fileset>
+    </path>
+    <!-- 1. 初始化工作，如创建目录等 -->
+    <target name="init">
+        <mkdir dir="${classes.dir}" />
+        <mkdir dir="${output.dir}" />
+    </target>
+    <!-- 2. 编译 -->
+    <target name="compile" depends="init">
+        <javac srcdir="${src.dir}" destdir="${classes.dir}">
+            <compilerarg line="-encoding UTF-8" />
+            <classpath refid="lib-classpath" />
+        </javac>
+    </target>
+    <!-- 3. 打包jar文件 -->
+    <target name="jar" depends="compile">
+        <copy todir="${output.dir}/lib">
+            <fileset dir="${lib.dir}" />
+        </copy>
+        <!--Create a property containing all .jar files, prefix lib/, and seperated with a space-->
+        <pathconvert property="mf.classpath" pathsep=" ">
+            <mapper>
+                <chainedmapper>
+                    <!-- jar包文件只留文件名，去掉目录信息 -->
+                    <flattenmapper/>
+                    <!-- add lib/ prefix -->
+                    <globmapper from="*" to="lib/*" />
+                </chainedmapper>
+            </mapper>
+            <path refid="lib-classpath" />
+        </pathconvert>
+        <!-- jar文件的输出路径 -->
+        <jar destfile="${output.dir}/${jarname}" basedir="${classes.dir}">
+            <manifest>
+                <attribute name="Main-class" value="${mainclass}" />
+                <attribute name="Class-Path" value="${mf.classpath}" />
+            </manifest>
+        </jar>
+    </target>
+</project>

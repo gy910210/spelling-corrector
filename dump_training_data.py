@@ -23,16 +23,6 @@ def dump_training_data(origin_file, format_file):
         elif data['match_type'] == 'predict':
             if data['cor_type'] == '':
                 outfile.write(data['word'] + '\t' + data['word'] + '\t' + str(data['cnt']) + '\n')
-            '''
-            elif data['cor_type'] == 'cor':
-                error_word = ''
-                for i in xrange(len(data['word'])):
-                    if i < len(data['key']):
-                        error_word = error_word + data['key'][i]
-                    else:
-                        error_word = error_word + data['word'][i]
-                outfile.write(data['word'] + '\t' + error_word + '\t' + str(data['cnt']) + '\n')
-            '''
             elif data['cor_type'] == 'spe':
                 error_word = data['spell_info']['spell_in']
                 for i in xrange(len(data['word'])):
