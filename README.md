@@ -1,6 +1,6 @@
 Spell Corrector Readme
 ======================
-### You can use this tool to generate noisy channel model parameters and test the performance. Then you can use the model to do spell correction task.
+You can use this tool to generate noisy channel model parameters and test the performance. Then you can use the model to do spell correction task.
 
 + ## Project name
 SpellCorrectorBuild (This is a java project)
