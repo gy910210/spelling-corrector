@@ -8,6 +8,7 @@ import java.util.List;
 
 /**
  * Created by gongyu on 2015/4/25.
+ * Calculate edit distance and Return the alignment.
  */
 
 public class EditDistance {
@@ -69,8 +70,6 @@ public class EditDistance {
             }
         }
 
-        // List<cootek.spell.bean.Pair> pos_list = new ArrayList<>();
-
         int i = m, j = n;
         while ((i > 0) || (j > 0)) {
             Pos pos = pos_record[i][j];
@@ -82,12 +81,5 @@ public class EditDistance {
         Collections.reverse(pos_list);
 
         return record[m][n];
-    }
-
-    public static void main(String[] args){
-        List<Pair<Character>> pos_list = new ArrayList<>();
-        int dis = new EditDistance().edit("actual", "akgsual", pos_list);
-        System.out.println(pos_list);
-        System.out.println(dis);
     }
 }

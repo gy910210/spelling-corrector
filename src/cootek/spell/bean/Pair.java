@@ -2,8 +2,9 @@ package cootek.spell.bean;
 
 /**
  * Created by gongyu on 2015/4/25.
+ * Define Pair data structure.
  */
-public class Pair <T> {
+public class Pair<T> {
     public T val1;
     public T val2;
 

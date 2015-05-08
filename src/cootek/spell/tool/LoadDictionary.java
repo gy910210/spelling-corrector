@@ -6,6 +6,7 @@ import java.util.HashSet;
 
 /**
  * Created by gongyu on 2015/4/26.
+ * Load the dictionary.
  */
 public class LoadDictionary {
     public HashSet<String> loadDictionary(String dic_file) throws Exception{

@@ -2,10 +2,11 @@ package cootek.spell.bean;
 
 /**
  * Created by gongyu on 2015/4/26.
+ * Class define a predicted word and the score.
  */
 public class PredictWord implements Comparable<PredictWord>{
-    public String w;
-    public double prob;
+    public String w; // predicted word
+    public double prob; // score
 
     @Override
     public int compareTo(PredictWord o) {

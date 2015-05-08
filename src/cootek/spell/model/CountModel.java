@@ -8,6 +8,7 @@ import java.util.HashMap;
 
 /**
  * Created by gongyu on 2015/4/25.
+ * Generate and save Count(alpha)
  */
 public class CountModel {
     private HashMap<String, Integer> countMap;
@@ -20,26 +21,24 @@ public class CountModel {
         while((line = br.readLine()) != null){
             if(line.trim().equals("")) continue;
             String[] strs = line.trim().split("\t");
-            String[] pairs = strs[0].trim().split(" | ");
-            // System.out.println(pairs[0]);
-            if(!countMap.containsKey(pairs[0])) countMap.put(pairs[0], 0);
+            if(!countMap.containsKey(strs[0])) countMap.put(strs[0], 0);
         }
         System.out.println("key count: " + countMap.keySet().size());
         br.close();
     }
 
-    public void dumpCountInfo(String train_file, String count_file) throws Exception{
+    public void dumpCountData(String train_file, String count_file) throws Exception{
         BufferedReader br = new BufferedReader(new FileReader(train_file));
         BufferedWriter bw = new BufferedWriter(new FileWriter(count_file));
 
         int cnt = 1;
         String line;
-        while((line = br.readLine()) != null){
+        while((line = br.readLine()) != null) {
             if(cnt % 10000 == 0) System.out.println("cnt: " + cnt);
             if(line.trim().equals("")) continue;
             String[] strs = line.trim().split("\t");
             for(String key : countMap.keySet()){
-                int count = kmp(strs[0], key) * Integer.parseInt(strs[2]) + countMap.get(key);
+                int count = kmp(strs[0], key) * Integer.parseInt(strs[1]) + countMap.get(key);
                 countMap.put(key, count);
             }
             cnt += 1;
@@ -69,7 +68,7 @@ public class CountModel {
         return next;
     }
 
-    public int kmp(String target, String pattern){
+    private int kmp(String target, String pattern){
         int ans = 0;
         int n = target.length();
         int m = pattern.length();
@@ -87,12 +86,5 @@ public class CountModel {
             }
         }
         return ans;
-    }
-
-    public static void main(String[] args) throws Exception{
-        CountModel countModel = new CountModel();
-        // System.out.println(countModel.kmp("abcbc", "ab"));
-        countModel.init("error_data.txt");
-        countModel.dumpCountInfo("training_data.txt", "count_data.txt");
     }
 }

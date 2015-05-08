@@ -1,11 +1,11 @@
 package cootek.spell.tool;
 
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 
 /**
  * Created by gongyu on 2015/4/28.
+ * Save the log information.
  */
 public class Log {
     public BufferedWriter bw;
