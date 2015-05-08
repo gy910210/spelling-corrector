@@ -41,5 +41,7 @@ The file is like the format:
 + If you don't change the original spell data, you can reuse the middle file in tmp directory so that the train process can be fast.
 + The noisy channel model parameters file "channel_data.txt" can be resued all the time.
 
-
++ ## Reference
+The main method is based on Noisy Channel Model and an improved method from Microsoft Research
+http://ucrel.lancs.ac.uk/acl/P/P00/P00-1037.pdf
 
