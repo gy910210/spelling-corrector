@@ -1,10 +1,8 @@
-package cootek.spell.tool;
+package test;
 
-import cootek.spell.bean.Pair;
-
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import train.Pair;
 
 /**
  * Created by gongyu on 2015/4/25.
@@ -34,8 +32,8 @@ public class EditDistance {
 
         int[][] record = new int[m + 1][n + 1];
         Pos[][] pos_record = new Pos[m + 1][n + 1];
-        for(int i = 0; i <= m; i++)
-            for(int j = 0; j <= n; j++)
+        for (int i = 0; i <= m; i++)
+            for (int j = 0; j <= n; j++)
                 pos_record[i][j] = new Pos();
 
         for (int i = 1; i <= n; i++) {
@@ -79,7 +77,6 @@ public class EditDistance {
         }
 
         Collections.reverse(pos_list);
-
         return record[m][n];
     }
 }

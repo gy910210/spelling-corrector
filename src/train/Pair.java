@@ -1,8 +1,8 @@
-package cootek.spell.bean;
+package train;
 
 /**
  * Created by gongyu on 2015/4/25.
- * Define Pair data structure.
+ * Define train.Pair data structure.
  */
 public class Pair<T> {
     public T val1;
@@ -20,8 +20,8 @@ public class Pair<T> {
 
     @Override
     public boolean equals(Object obj) {
-        if(obj == null) return false;
-        if(!(obj instanceof Pair)) return false;
+        if (obj == null) return false;
+        if (!(obj instanceof Pair)) return false;
         Pair<T> pair = (Pair<T>) obj;
         return (this.val1.equals(pair.val1) && this.val2.equals(pair.val2));
     }

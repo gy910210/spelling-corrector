@@ -1,19 +1,16 @@
-package cootek.spell.main;
+package test;
+
+import train.Pair;
 
 import java.util.List;
-import cootek.spell.bean.PredictWord;
-import cootek.spell.bean.Pair;
-import cootek.spell.tool.Log;
-import cootek.spell.tool.GenerateTestData;
 
 /**
  * Created by gongyu on 2015/4/26.
  * Test Channel Model.
  */
 public class TestModel {
-    private String NOISY_CHANNEL_FILE;
-    private String WORDS_FILE;
-    private String TEST_FILE;
+    private String noisy_channel_file;
+    private String dic_file;
 
     private double probEqual;
     private int mostDis;
@@ -21,11 +18,10 @@ public class TestModel {
     private int contextNum;
     private int topNum;
 
-    public TestModel(String NOISY_CHANNEL_FILE, String TEST_FILE, String WORDS_FILE,
+    public TestModel(String noisy_channel_file, String dic_file,
                      double probEqual, int mostDis, int contextNum, double smoothVal, int topNum) {
-        this.NOISY_CHANNEL_FILE = NOISY_CHANNEL_FILE;
-        this.TEST_FILE = TEST_FILE;
-        this.WORDS_FILE = WORDS_FILE;
+        this.noisy_channel_file = noisy_channel_file;
+        this.dic_file = dic_file;
         this.probEqual = probEqual;
         this.mostDis = mostDis;
         this.contextNum = contextNum;
@@ -37,11 +33,10 @@ public class TestModel {
         Log log = new Log();
         log.open("test_result.txt");
 
-        // Random select 1000 test data
-        List<Pair<String>> testData = new GenerateTestData().loadTestData(TEST_FILE, WORDS_FILE, 1000, mostDis);
-        log.log("test data = " + 1000 + "\t" + "most dis. = " + mostDis);
+        List<Pair<String>> testData = new GenerateTestData().loadTestData("test_data.txt");
+        log.log("test data = " + 5000 + "\t" + "most dis. = " + mostDis);
 
-        PredictModel pm = new PredictModel(WORDS_FILE, NOISY_CHANNEL_FILE, probEqual, mostDis, smoothVal, contextNum);
+        PredictModel pm = new PredictModel(dic_file, noisy_channel_file, probEqual, mostDis, smoothVal, contextNum);
         log.log("equal prob. = " + probEqual + "\t"
                 + "most dis. = " + mostDis + "\t"
                 + "smooth prob. = " + smoothVal + "\t"

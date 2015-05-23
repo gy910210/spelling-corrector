@@ -1,4 +1,4 @@
-package cootek.spell.tool;
+package test;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

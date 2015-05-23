@@ -1,4 +1,4 @@
-package cootek.spell.bean;
+package test;
 
 /**
  * Created by gongyu on 2015/4/26.

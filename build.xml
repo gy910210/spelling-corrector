@@ -5,7 +5,7 @@
     <property name="classes.dir" value="bin" />
     <property name="output.dir" value="out" />
     <property name="jarname" value="SpellCorrector.jar" />
-    <property name="mainclass" value="cootek.spell.main.Run" />
+    <property name="mainclass" value="main.Run" />
     <!-- 第三方jar包的路径 -->
     <path id="lib-classpath">
         <fileset dir="${lib.dir}">
