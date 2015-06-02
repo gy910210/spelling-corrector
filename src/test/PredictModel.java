@@ -1,6 +1,8 @@
 package test;
 
 import train.Pair;
+import utils.LoadDictionary;
+import utils.LoadNoisyChannelData;
 
 import java.util.*;
 
@@ -17,15 +19,28 @@ public class PredictModel {
     private HashSet<String> dicSet;
     private HashMap<String, Double> channelMap;
 
+    // Constructor for test model
     public PredictModel(String dic_file, String noisy_channel_file,
-                        double probEqual, int mostDis, double smoothVal, int contextNum) throws Exception{
+                        double probEqual, int mostDis, int contextNum) throws Exception {
+        this.probEqual = probEqual;
+        this.mostDis = mostDis;
+        this.contextNum = contextNum;
+
+        dicSet = new LoadDictionary().loadDictionary(dic_file);
+        channelMap = new LoadNoisyChannelData().loadNoisyChannelData(noisy_channel_file);
+        this.smoothVal = new GetMapSmallest().getMapSmallest(channelMap, 10);
+    }
+
+    // Constructor for prune model
+    public PredictModel(HashSet<String> dicSet, HashMap<String, Double> channelMap,
+                        double probEqual, int mostDis, double smoothVal, int contextNum) throws Exception {
         this.probEqual = probEqual;
         this.mostDis = mostDis;
         this.smoothVal = smoothVal;
         this.contextNum = contextNum;
 
-        dicSet = new LoadDictionary().loadDictionary(dic_file);
-        channelMap = new LoadNoisyChannelData().loadNoisyChannelData(noisy_channel_file);
+        this.dicSet = dicSet;
+        this.channelMap = channelMap;
     }
 
     public List<PredictWord> predict(String source, int top_k) throws Exception {
@@ -91,4 +106,6 @@ public class PredictModel {
         }
         return record[pos_list.size()];
     }
+
+    public double getSmoothVal() { return this.smoothVal; }
 }

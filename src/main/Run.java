@@ -1,6 +1,7 @@
 package main;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import prune.PruneModel;
 import test.TestModel;
 import train.TrainModel;
 
@@ -19,7 +20,7 @@ public class Run {
             // Parse parameter
             System.out.println("parse parameter ...");
             brParameter = new BufferedReader(new FileReader("parameter"));
-            StringBuffer sb = new StringBuffer("");
+            StringBuilder sb = new StringBuilder("");
             String line;
             while ((line = brParameter.readLine()) != null) {
                 if (line.trim().equals("")) continue;
@@ -31,24 +32,38 @@ public class Run {
             String dic_file = jsonObj.get("dic_file").getAsString();
 
             double equal_prob = jsonObj.get("equal_prob").getAsDouble();
-            double smooth_prob = jsonObj.get("smooth_prob").getAsDouble();
             int most_dis = jsonObj.get("most_dis").getAsInt();
             int context_num = jsonObj.get("context_num").getAsInt();
             int top_num = jsonObj.get("top_num").getAsInt();
             String train = jsonObj.get("train").getAsString();
+            String test = jsonObj.get("test").getAsString();
+            String prune = jsonObj.get("prune").getAsString();
+
+            String transfer_freq = jsonObj.get("transfer_freq").getAsString();
 
             // Train model
             if (train.equals("yes")) {
                 System.out.println("train model ...");
                 TrainModel trainModel = new TrainModel();
-                trainModel.trainNoisyChannelModel(dic_file, train_file, model_file, context_num);
+                trainModel.trainNoisyChannelModel(dic_file, train_file, model_file,
+                        context_num, transfer_freq);
             }
 
             // Test model
-            System.out.println("test model ...");
-            TestModel testModel = new TestModel(model_file, dic_file,
-                    equal_prob, most_dis, context_num, smooth_prob, top_num);
-            testModel.test();
+            if (test.equals("yes")) {
+                System.out.println("test model ...");
+                TestModel testModel = new TestModel(model_file, dic_file,
+                        equal_prob, most_dis, context_num, top_num);
+                testModel.test();
+            }
+
+            // Prune model
+            if (prune.equals("yes")) {
+                System.out.println("prune model ...");
+                PruneModel pm = new PruneModel(dic_file, model_file, equal_prob,
+                        most_dis, context_num, top_num);
+                pm.prune(20);
+            }
         }catch (Exception e) {
             e.printStackTrace();
         }

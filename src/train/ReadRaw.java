@@ -19,12 +19,12 @@ public class ReadRaw {
     public HashMap<String, Double> errorDataMap;
     public HashMap<String, Double> corpusCountMap;
 
-    public void readRaw(String dicFile, String trainFile, int context_num) throws Exception {
+    public void readRaw(String dicFile, String trainFile, int contextNum, String transferFreq) throws Exception {
         loadDictionary(dicFile);
-        loadTrainData(trainFile, context_num);
+        loadTrainData(trainFile, contextNum, transferFreq);
     }
 
-    public void loadTrainData(String trainFile, int context_num) throws Exception {
+    public void loadTrainData(String trainFile, int contextNum, String transferFreq) throws Exception {
         errorDataMap = new HashMap<>();
         corpusCountMap = new HashMap<>();
         BufferedReader br = new BufferedReader(new FileReader(trainFile));
@@ -44,7 +44,7 @@ public class ReadRaw {
             if (!dicSet.contains(word) || cor_type.equals("spe_cor")) continue;
             if (match_type.equals("predict") && cor_type.equals("spe")) continue;
 
-            List<String> wordSliceList = getWordSliceList(word, context_num + 1);
+            List<String> wordSliceList = getWordSliceList(word, contextNum + 1);
             for (String slice : wordSliceList) {
                 double count;
                 if (!corpusCountMap.containsKey(slice)) {
@@ -75,7 +75,7 @@ public class ReadRaw {
                 posList = alignPos(word, error_word.toString(), spell_type, spell_pos);
             }
 
-            List<String> errorList = splitError(posList, context_num);
+            List<String> errorList = splitError(posList, contextNum);
             for (String error : errorList) {
                 if (!errorDataMap.containsKey(error)) {
                     errorDataMap.put(error, (double) cnt);
@@ -87,11 +87,31 @@ public class ReadRaw {
         }
         br.close();
 
-        for (String slice : corpusCountMap.keySet()) {
-            corpusCountMap.put(slice, Math.log(1 + Math.log(1 + corpusCountMap.get(slice))));
-        }
-        for (String error : errorDataMap.keySet()) {
-            errorDataMap.put(error, Math.log(1 + Math.log(1 + errorDataMap.get(error))));
+        switch (transferFreq) {
+            case "no":
+                for (String slice : corpusCountMap.keySet()) {
+                    corpusCountMap.put(slice, corpusCountMap.get(slice));
+                }
+                for (String error : errorDataMap.keySet()) {
+                    errorDataMap.put(error, errorDataMap.get(error));
+                }
+                break;
+            case "log":
+                for (String slice : corpusCountMap.keySet()) {
+                    corpusCountMap.put(slice, Math.log(1 + corpusCountMap.get(slice)));
+                }
+                for (String error : errorDataMap.keySet()) {
+                    errorDataMap.put(error, Math.log(1 + errorDataMap.get(error)));
+                }
+                break;
+            case "loglog":
+                for (String slice : corpusCountMap.keySet()) {
+                    corpusCountMap.put(slice, Math.log(1 + Math.log(1 + corpusCountMap.get(slice))));
+                }
+                for (String error : errorDataMap.keySet()) {
+                    errorDataMap.put(error, Math.log(1 + Math.log(1 + errorDataMap.get(error))));
+                }
+                break;
         }
     }
 
@@ -117,7 +137,7 @@ public class ReadRaw {
         return wordSliceList;
     }
 
-    private List<String> splitError(List<Pair<Character>> posList, int context_num) {
+    private List<String> splitError(List<Pair<Character>> posList, int contextNum) {
         List<String> errorList = new ArrayList<>();
 
         for (int pos = 0; pos < posList.size(); pos++) {
@@ -126,7 +146,7 @@ public class ReadRaw {
             if ((posList.get(pos).val1 != '#') && (posList.get(pos).val2 != '#'))
                 errorList.add(posList.get(pos).val1 + "\t" + posList.get(pos).val2);
 
-            for (int slide = 1; slide <= context_num; slide++) {
+            for (int slide = 1; slide <= contextNum; slide++) {
                 int head = Math.max(0, pos - slide);
                 for (int i = head; i <= pos; i++) {
                     if(i + slide >= posList.size()) continue;

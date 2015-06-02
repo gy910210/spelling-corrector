@@ -8,9 +8,10 @@ import java.io.FileWriter;
  */
 
 public class TrainModel {
-    public void trainNoisyChannelModel(String dicFile, String trainFile, String modelFile, int context_num) throws Exception {
+    public void trainNoisyChannelModel(String dicFile, String trainFile, String modelFile,
+                                       int contextNum, String transferFreq) throws Exception {
         ReadRaw rr = new ReadRaw();
-        rr.readRaw(dicFile, trainFile, context_num);
+        rr.readRaw(dicFile, trainFile, contextNum, transferFreq);
 
         BufferedWriter bw = new BufferedWriter(new FileWriter(modelFile));
         for (String error : rr.errorDataMap.keySet()) {

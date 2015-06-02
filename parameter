@@ -3,9 +3,11 @@
 	"train_file": "final.out",
 	"dic_file": "words.txt",
 	"equal_prob": 0.9,
-	"smooth_prob": -1,
 	"most_dis": 2,
 	"context_num": 2,
+	"transfer_freq": "loglog",
 	"top_num": 3,
-	"train": "yes"
+	"train": "no",
+	"test": "no",
+	"prune": "yes"
 }
