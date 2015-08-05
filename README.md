@@ -13,7 +13,7 @@ project |-src |-lib |-bin |-out |-build.xml
 
 Build project
 ---------
-In the project `SpellCorrectorBuild` root directory, use `ant` command to build the project, and ouput a jar file `SpellCorrectorBuild.jar`  in directory `/out/` .
+In the project `SpellCorrectorBuild` root directory, use `ant` command to build the project, and ouput a jar file `SpellCorrectorBuild.jar`  in directory `./out/` .
 
 How to use
 ---------
@@ -23,10 +23,10 @@ How to use
 
 File descriptions
 ---------
-- channel_model.txt
+- `channel_model.txt`
 The file is like the format:
 `(word_slice key_slice log_probability)`
-- parameter
+- `parameter`
 A json format file:
 ```
 {
