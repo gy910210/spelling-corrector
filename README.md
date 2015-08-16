@@ -8,7 +8,7 @@ spelling-corrector (This is a java project)
 ```
 +  Project orgnization
 ```
-project |-src |-lib |-bin |-out |-build.xml
+project |-src |-lib |-bin |-out |-data |-build.xml
 ```
 
 Build project
@@ -53,6 +53,20 @@ A json format file:
 > 6. `train`, `test` and `prune` are the parameters that if you want to train the model, test the model or prune the model again. If you want, you can set it as `yes`, otherwise you can set it as `no`.
 > 7. Another parameter `smooth value` is the value you will use when the score of a pair is not in your model due to the sparseness of the model. We calculate the value by the average of the 10 smallest data in `channle_data.txt` file.
 
+Example data
+------------
+In the `data` directory, there is some example data. You can refer to it.
++ `final.out` is the original train file, it's of json format. A line represents a case of miss spelling. The format is as follows.
+
+> 1. `word` is the word user wants to input.
+> 2. `key` is the word user actually inputs.
+> 3. `cnt` is the number of this case in the input method engine (IME) user data.
+> 4. `match_type` is wether this input is precise or predict by the IME.
+> 5. `cor_type` is wether this input is a "corrector" type or "spell check" type (we only consider spell check type, because IME can correct missing input by keyboard position), 
+> 6. If `cor_type` is "spell check", then `spell_info` is the information of this spelling. It includes the follows. `spell_in` is the word user actually inputs. `spell_out` is the word user wants to input. `spell_type` is the missing input type, including `__ins__` (user inserts an additional letter), `__del__` (user deletes a letter), `__tra__` (user transposes two letters). `spell_pos` is the position of this missing input. `predict_type` is wether this input is precise or predict by the IME. `evidence_len` is the length of the word user wants to input.
+> 7. `words.txt` is the vocabulary file.
+> 8. `test_data.txt` is the test file, and each line is a missing input case. The first column is the word user wants to input, and the second column is the word user actually inputs.
+> 9. `test_result.txt` is the test results of the model. `prune_data.txt` is the pruned model file. `channel_data.txt` and `channel_data_loglog.txt` are the output model file.
 
 Reference
 ---------
