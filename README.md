@@ -64,9 +64,10 @@ In the `data` directory, there is some example data. You can refer to it.
 > 4. `match_type` is wether this input is precise or predict by the IME.
 > 5. `cor_type` is wether this input is a "corrector" type or "spell check" type (we only consider spell check type, because IME can correct missing input by keyboard position), 
 > 6. If `cor_type` is "spell check", then `spell_info` is the information of this spelling. It includes the follows. `spell_in` is the word user actually inputs. `spell_out` is the word user wants to input. `spell_type` is the missing input type, including `__ins__` (user inserts an additional letter), `__del__` (user deletes a letter), `__tra__` (user transposes two letters). `spell_pos` is the position of this missing input. `predict_type` is wether this input is precise or predict by the IME. `evidence_len` is the length of the word user wants to input.
-> 7. `words.txt` is the vocabulary file.
-> 8. `test_data.txt` is the test file, and each line is a missing input case. The first column is the word user wants to input, and the second column is the word user actually inputs.
-> 9. `test_result.txt` is the test results of the model. `prune_data.txt` is the pruned model file. `channel_data.txt` and `channel_data_loglog.txt` are the output model file.
+
++ `words.txt` is the vocabulary file.
++ `test_data.txt` is the test file, and each line is a missing input case. The first column is the word user wants to input, and the second column is the word user actually inputs.
++ `test_result.txt` is the test results of the model. `prune_data.txt` is the pruned model file. `channel_data.txt` and `channel_data_loglog.txt` are the output model file.
 
 Reference
 ---------
