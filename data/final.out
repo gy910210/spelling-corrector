@@ -1,0 +1,80 @@
+{"word": "goodnight", "key": "gooodnight", "cnt": 71, "match_type": "precise", "cor_type": "spe", "spell_info": {"spell_in": "gooodnight", "spell_out": "goodnight", "spell_type": "__del__", "spell_pos": 3, "predict_type": "precise", "evidence_len": 9}}
+{"word": "level", "key": "levsl", "cnt": 71, "match_type": "precise", "cor_type": "cor"}
+{"word": "hold", "key": "hod", "cnt": 71, "match_type": "precise", "cor_type": "spe", "spell_info": {"spell_in": "hod", "spell_out": "hold", "spell_type": "__ins__", "spell_pos": 2, "predict_type": "precise", "evidence_len": 4}}
+{"word": "properly", "key": "prp", "cnt": 71, "match_type": "predict", "cor_type": "cor"}
+{"word": "raise", "key": "rasie", "cnt": 71, "match_type": "precise", "cor_type": "spe", "spell_info": {"spell_in": "rasie", "spell_out": "raise", "spell_type": "__tra__", "spell_pos": 2, "predict_type": "precise", "evidence_len": 5}}
+{"word": "goib", "key": "goib", "cnt": 71, "match_type": "precise", "cor_type": ""}
+{"word": "kept", "key": "mept", "cnt": 71, "match_type": "precise", "cor_type": "cor"}
+{"word": "my", "key": "myf", "cnt": 71, "match_type": "precise", "cor_type": "spe", "spell_info": {"spell_in": "myf", "spell_out": "my", "spell_type": "__del__", "spell_pos": 2, "predict_type": "precise", "evidence_len": 2}}
+{"word": "gone", "key": "gonen", "cnt": 71, "match_type": "precise", "cor_type": "spe", "spell_info": {"spell_in": "gonen", "spell_out": "gone", "spell_type": "__del__", "spell_pos": 4, "predict_type": "precise", "evidence_len": 4}}
+{"word": "letters", "key": "lettrrs", "cnt": 71, "match_type": "precise", "cor_type": "cor"}
+{"word": "hippos", "key": "hippo", "cnt": 71, "match_type": "predict", "cor_type": ""}
+{"word": "processors", "key": "processors", "cnt": 71, "match_type": "precise", "cor_type": ""}
+{"word": "quue", "key": "quue", "cnt": 71, "match_type": "precise", "cor_type": ""}
+{"word": "girl", "key": "horl", "cnt": 71, "match_type": "precise", "cor_type": "cor"}
+{"word": "kellys", "key": "kellys", "cnt": 71, "match_type": "precise", "cor_type": ""}
+{"word": "muller", "key": "mulher", "cnt": 71, "match_type": "precise", "cor_type": "spe", "spell_info": {"spell_in": "mulher", "spell_out": "muller", "spell_type": "__rep__", "spell_pos": 3, "predict_type": "precise", "evidence_len": 6}}
+{"word": "goddaughter", "key": "goddau", "cnt": 71, "match_type": "predict", "cor_type": ""}
+{"word": "length", "key": "legth", "cnt": 71, "match_type": "precise", "cor_type": "spe", "spell_info": {"spell_in": "legth", "spell_out": "length", "spell_type": "__ins__", "spell_pos": 2, "predict_type": "precise", "evidence_len": 6}}
+{"word": "hijab", "key": "huj", "cnt": 71, "match_type": "predict", "cor_type": "cor"}
+{"word": "price", "key": "peicw", "cnt": 71, "match_type": "precise", "cor_type": "cor"}
+{"word": "queue", "key": "queu", "cnt": 71, "match_type": "predict", "cor_type": ""}
+{"word": "ghat", "key": "fha", "cnt": 71, "match_type": "predict", "cor_type": "cor"}
+{"word": "karola", "key": "karola", "cnt": 71, "match_type": "precise", "cor_type": ""}
+{"word": "mtk", "key": "mgk", "cnt": 71, "match_type": "precise", "cor_type": "cor"}
+{"word": "glory", "key": "go", "cnt": 71, "match_type": "predict", "cor_type": "cor"}
+{"word": "led", "key": "lled", "cnt": 71, "match_type": "precise", "cor_type": "spe", "spell_info": {"spell_in": "lled", "spell_out": "led", "spell_type": "__del__", "spell_pos": 1, "predict_type": "precise", "evidence_len": 3}}
+{"word": "hibernate", "key": "hibe", "cnt": 71, "match_type": "predict", "cor_type": ""}
+{"word": "prettier", "key": "pe", "cnt": 71, "match_type": "predict", "cor_type": "cor"}
+{"word": "quality", "key": "qy", "cnt": 71, "match_type": "predict", "cor_type": "cor"}
+{"word": "geralds", "key": "geralds", "cnt": 71, "match_type": "precise", "cor_type": ""}
+{"word": "kaito", "key": "kaito", "cnt": 71, "match_type": "precise", "cor_type": ""}
+{"word": "moving", "key": "movomg", "cnt": 71, "match_type": "precise", "cor_type": "cor"}
+{"word": "girl", "key": "virl", "cnt": 71, "match_type": "precise", "cor_type": "cor"}
+{"word": "least", "key": "ke", "cnt": 71, "match_type": "predict", "cor_type": "cor"}
+{"word": "hey", "key": "hwe", "cnt": 71, "match_type": "predict", "cor_type": "spe", "spell_info": {"spell_in": "hwe", "spell_out": "he", "spell_type": "__del__", "spell_pos": 1, "predict_type": "predict", "evidence_len": 2}}
+{"word": "prayer", "key": "prsyer", "cnt": 71, "match_type": "precise", "cor_type": "cor"}
+{"word": "putting", "key": "puut", "cnt": 71, "match_type": "predict", "cor_type": "spe", "spell_info": {"spell_in": "puut", "spell_out": "putt", "spell_type": "__rep__", "spell_pos": 2, "predict_type": "predict", "evidence_len": 4}}
+{"word": "genau", "key": "genau", "cnt": 71, "match_type": "precise", "cor_type": ""}
+{"word": "jules", "key": "ju", "cnt": 71, "match_type": "predict", "cor_type": ""}
+{"word": "morning", "key": "mos", "cnt": 71, "match_type": "predict", "cor_type": "spe", "spell_info": {"spell_in": "mos", "spell_out": "mor", "spell_type": "__rep__", "spell_pos": 2, "predict_type": "predict", "evidence_len": 3}}
+{"word": "giraffe", "key": "girraffe", "cnt": 71, "match_type": "precise", "cor_type": "spe", "spell_info": {"spell_in": "girraffe", "spell_out": "giraffe", "spell_type": "__del__", "spell_pos": 3, "predict_type": "precise", "evidence_len": 7}}
+{"word": "laying", "key": "layonh", "cnt": 71, "match_type": "precise", "cor_type": "cor"}
+{"word": "hero", "key": "h", "cnt": 71, "match_type": "predict", "cor_type": ""}
+{"word": "power", "key": "poe", "cnt": 71, "match_type": "predict", "cor_type": "cor"}
+{"word": "punched", "key": "puncjed", "cnt": 71, "match_type": "precise", "cor_type": "cor"}
+{"word": "garrets", "key": "garrets", "cnt": 71, "match_type": "precise", "cor_type": ""}
+{"word": "joyce", "key": "joyce", "cnt": 71, "match_type": "precise", "cor_type": ""}
+{"word": "month", "key": "monrh", "cnt": 71, "match_type": "precise", "cor_type": "cor"}
+{"word": "gets", "key": "ges", "cnt": 71, "match_type": "precise", "cor_type": "spe", "spell_info": {"spell_in": "ges", "spell_out": "gets", "spell_type": "__ins__", "spell_pos": 2, "predict_type": "precise", "evidence_len": 4}}
+{"word": "large", "key": "lare", "cnt": 71, "match_type": "precise", "cor_type": "spe", "spell_info": {"spell_in": "lare", "spell_out": "large", "spell_type": "__ins__", "spell_pos": 3, "predict_type": "precise", "evidence_len": 5}}
+{"word": "hensem", "key": "hensem", "cnt": 71, "match_type": "precise", "cor_type": ""}
+{"word": "posted", "key": "poted", "cnt": 71, "match_type": "precise", "cor_type": "spe", "spell_info": {"spell_in": "poted", "spell_out": "posted", "spell_type": "__ins__", "spell_pos": 2, "predict_type": "precise", "evidence_len": 6}}
+{"word": "pueblo", "key": "p", "cnt": 71, "match_type": "predict", "cor_type": ""}
+{"word": "gaja", "key": "gaja", "cnt": 71, "match_type": "precise", "cor_type": ""}
+{"word": "jolie", "key": "j", "cnt": 71, "match_type": "predict", "cor_type": ""}
+{"word": "mom", "key": "momy", "cnt": 71, "match_type": "precise", "cor_type": "spe", "spell_info": {"spell_in": "momy", "spell_out": "mom", "spell_type": "__del__", "spell_pos": 3, "predict_type": "precise", "evidence_len": 3}}
+{"word": "get", "key": "fw", "cnt": 71, "match_type": "predict", "cor_type": "cor"}
+{"word": "lang", "key": "lanf", "cnt": 71, "match_type": "precise", "cor_type": "cor"}
+{"word": "hell", "key": "be", "cnt": 71, "match_type": "predict", "cor_type": "cor"}
+{"word": "portable", "key": "portabke", "cnt": 71, "match_type": "precise", "cor_type": "cor"}
+{"word": "province", "key": "province", "cnt": 71, "match_type": "precise", "cor_type": ""}
+{"word": "furious", "key": "furuo", "cnt": 71, "match_type": "predict", "cor_type": "cor"}
+{"word": "jimmy", "key": "jimmh", "cnt": 71, "match_type": "precise", "cor_type": "cor"}
+{"word": "mojaaa", "key": "mojaaa", "cnt": 71, "match_type": "precise", "cor_type": ""}
+{"word": "genial", "key": "ge", "cnt": 71, "match_type": "predict", "cor_type": ""}
+{"word": "lakes", "key": "lajes", "cnt": 71, "match_type": "precise", "cor_type": "cor"}
+{"word": "heels", "key": "heal", "cnt": 71, "match_type": "predict", "cor_type": "spe", "spell_info": {"spell_in": "heal", "spell_out": "heel", "spell_type": "__rep__", "spell_pos": 2, "predict_type": "predict", "evidence_len": 4}}
+{"word": "pop", "key": "pip", "cnt": 71, "match_type": "precise", "cor_type": "cor"}
+{"word": "problems", "key": "orobkems", "cnt": 71, "match_type": "precise", "cor_type": "cor"}
+{"word": "from", "key": "fdon", "cnt": 71, "match_type": "precise", "cor_type": "cor"}
+{"word": "jess", "key": "je", "cnt": 71, "match_type": "predict", "cor_type": ""}
+{"word": "mit", "key": "mi", "cnt": 71, "match_type": "predict", "cor_type": ""}
+{"word": "gay", "key": "gas", "cnt": 71, "match_type": "precise", "cor_type": "spe", "spell_info": {"spell_in": "gas", "spell_out": "gay", "spell_type": "__rep__", "spell_pos": 2, "predict_type": "precise", "evidence_len": 3}}
+{"word": "ladies", "key": "las", "cnt": 71, "match_type": "predict", "cor_type": "cor"}
+{"word": "healthier", "key": "healthy", "cnt": 71, "match_type": "predict", "cor_type": "spe", "spell_info": {"spell_in": "healthy", "spell_out": "healthi", "spell_type": "__rep__", "spell_pos": 6, "predict_type": "predict", "evidence_len": 7}}
+{"word": "pomona", "key": "po", "cnt": 71, "match_type": "predict", "cor_type": ""}
+{"word": "priceless", "key": "pricel", "cnt": 71, "match_type": "predict", "cor_type": ""}
+{"word": "fried", "key": "fri", "cnt": 71, "match_type": "predict", "cor_type": ""}
+{"word": "jay", "key": "jaay", "cnt": 71, "match_type": "precise", "cor_type": "spe", "spell_info": {"spell_in": "jaay", "spell_out": "jay", "spell_type": "__del__", "spell_pos": 2, "predict_type": "precise", "evidence_len": 3}}
+{"word": "missile", "key": "missle", "cnt": 71, "match_type": "precise", "cor_type": "spe", "spell_info": {"spell_in": "missle", "spell_out": "missile", "spell_type": "__ins__", "spell_pos": 4, "predict_type": "precise", "evidence_len": 7}}
