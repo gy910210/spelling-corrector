@@ -76,6 +76,7 @@ Reference
 License
 ---------
 spelling-corrector is published under MIT License
+
 Copyright (c) 2015 Yu Gong (@PangoLulu)
 ```
 Permission is hereby granted, free of charge, to any person obtaining a copy of
