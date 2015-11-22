@@ -39,9 +39,9 @@ A json format file:
 	"context_num": 2,
 	"transfer_freq": "loglog",
 	"top_num": 3,
-	"train": "no",
-	"test": "no",
-	"prune": "yes"
+	"train": "yes",
+	"test": "yes",
+	"prune": "no"
 }
 ```
 
