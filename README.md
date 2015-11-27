@@ -69,6 +69,9 @@ In the `data` directory, there is some example data. You can refer to it.
 + `test_data.txt` is the test file, and each line is a missing input case. The first column is the word user wants to input, and the second column is the word user actually inputs.
 + `test_result.txt` is the test results of the model. `prune_data.txt` is the pruned model file. `channel_data.txt` and `channel_data_loglog.txt` are the output model file.
 
+Presentation
+-------------
+For more details about the spell correction techniques, you can follow this tutorial [hear](http://pangolulu.github.io/2015/10/27/spell-corrector/).
 Reference
 ---------
 +  The main method is based on Noisy Channel Model and an improved method from Microsoft Research http://ucrel.lancs.ac.uk/acl/P/P00/P00-1037.pdf
