@@ -71,7 +71,7 @@ In the `data` directory, there is some example data. You can refer to it.
 
 Presentation
 -------------
-For more details about the spell correction techniques, you can follow this tutorial [hear](http://pangolulu.github.io/2015/10/27/spell-corrector/).
+For more details about the spell correction techniques, you can follow this tutorial [here](http://pangolulu.github.io/2015/10/27/spell-corrector/).
 Reference
 ---------
 +  The main method is based on Noisy Channel Model and an improved method from Microsoft Research http://ucrel.lancs.ac.uk/acl/P/P00/P00-1037.pdf
